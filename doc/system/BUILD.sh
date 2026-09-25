@@ -3,7 +3,8 @@ set -euo pipefail
 
 PARTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$PARTS_DIR/../.." && pwd)"
-OUTPUT="${OUTPUT:-doc/ECNSYSTEM.md}"
+DESIGNATION="ECN"
+OUTPUT="${OUTPUT:-doc/${DESIGNATION}SYSTEM.md}"
 VALIDATOR="$PARTS_DIR/validate_snapshots.sh"
 
 mkdir -p "$(dirname "$ROOT_DIR/$OUTPUT")"
@@ -29,4 +30,4 @@ fi
 
 cp "$TMP_OUTPUT" "$ROOT_DIR/$OUTPUT"
 chmod 664 "$ROOT_DIR/$OUTPUT"
-echo "$OUTPUT assembled: $(wc -l < "$ROOT_DIR/$OUTPUT") lines"
+echo "$OUTPUT assembled: $(wc -l < "$ROOT_DIR/$OUTPUT") lines (BUILD_OK)"
