@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Repo Identity
+
+- Default branch: master
+
 ## Project Overview
 
 Eval Cal Node is a standalone CLI subsystem within the Forge ecosystem (`ecosystem/local-systems`). It is a post-implementation calibration node: it studies drift between `forge-eval` verification results, declared SYSTEM.md reality, and reconciliation output, then emits bounded, reviewable calibration proposals for Eval parameters. It never silently changes parameters — proposals are candidates only.
