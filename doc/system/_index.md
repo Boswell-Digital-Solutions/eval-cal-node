@@ -4,8 +4,9 @@
 **Document role:** Canonical compiled technical reference for the eval-cal-node post-implementation calibration subsystem
 **Source:** `doc/system/`
 **Build command:** `bash doc/system/BUILD.sh`
-**Document version:** 2.0 (2026-11-14) — canonical-compliance pass: added designation/source/build-command markers and the generated-artifact warning, removed the orphaned retired-subdirectory `.gitkeep` stubs (BDS Documentation Protocol v2.0 §5.3), made `BUILD.sh` fail-closed
+**Document version:** 2.1 (2026-11-14) — merged with a concurrent fleet-wide flatten migration (`bbbbb19`) landed on `master` while this change was in review: both removed the retired numbered-subdirectory layout independently. This pass adds the designation/source/build-command markers and the generated-artifact warning, removes the orphaned retired-subdirectory `.gitkeep` stubs (BDS Documentation Protocol v2.0 §5.3), and makes `BUILD.sh` fail-closed.
 **Protocol:** BDS Documentation Protocol v2.0
+**Documentation structure class:** `service`
 
 > **Generated artifact warning:** `doc/ECNSYSTEM.md` is assembled output. Edit
 > the source modules under `doc/system/` and rebuild. Hand edits to the
@@ -40,3 +41,5 @@ Assembly contract:
 ```bash
 bash doc/system/BUILD.sh
 ```
+
+This `doc/system/` tree uses explicit **truth classes**: canonical facts define role, authority boundaries, and security invariants; snapshot facts are dated, audit-derived observations.
