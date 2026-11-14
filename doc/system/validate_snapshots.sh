@@ -3,7 +3,7 @@ set -euo pipefail
 
 PARTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$PARTS_DIR/../.." && pwd)"
-ASSEMBLED_OUTPUT="${1:-$ROOT_DIR/doc/ECNSYSTEM.md}"
+ASSEMBLED_OUTPUT="${1:-$ROOT_DIR/doc/ecnSYSTEM.md}"
 
 require_contains() {
   local file="$1"
@@ -28,14 +28,14 @@ require_absent() {
 }
 
 # canonical source of truth: _index.md must declare the designation-bound output
-require_contains "$PARTS_DIR/_index.md" "Primary output: \`doc/ECNSYSTEM.md\`" "index primary output"
+require_contains "$PARTS_DIR/_index.md" "Primary output: \`doc/ecnSYSTEM.md\`" "index primary output"
 require_absent  "$PARTS_DIR/_index.md" "Primary output: \`doc/SYSTEM.md\`" "index legacy primary output"
 require_absent  "$PARTS_DIR/_index.md" "Command: \`bash doc/SYSTEM.md\`" "index legacy doc/SYSTEM.md command"
 
 # assembled artifact must carry doctrine and not still declare legacy output
 test -f "$ASSEMBLED_OUTPUT"
 require_contains "$ASSEMBLED_OUTPUT" "Document version" "assembled document version header"
-require_contains "$ASSEMBLED_OUTPUT" "Primary output: \`doc/ECNSYSTEM.md\`" "assembled primary output"
+require_contains "$ASSEMBLED_OUTPUT" "Primary output: \`doc/ecnSYSTEM.md\`" "assembled primary output"
 require_absent  "$ASSEMBLED_OUTPUT" "Primary output: \`doc/SYSTEM.md\`" "assembled legacy primary output"
 require_absent  "$ASSEMBLED_OUTPUT" "Root \`SYSTEM.md\` is the primary assembled reference." "assembled legacy primary reference"
 
