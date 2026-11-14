@@ -40,4 +40,4 @@ affect Eval math.
 ## Ownership
 
 Owner: Charlie (Forge ecosystem). Registry posture: a governed local-systems
-subsystem (proposed designation `ECN`).
+subsystem (designation `ecn`).

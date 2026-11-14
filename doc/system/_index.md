@@ -1,6 +1,6 @@
 # eval-cal-node — Compiled System Reference
 
-**Designation:** ECN
+**Designation:** ecn
 **Document role:** Canonical compiled technical reference for the eval-cal-node post-implementation calibration subsystem
 **Source:** `doc/system/`
 **Build command:** `bash doc/system/BUILD.sh`
@@ -8,7 +8,7 @@
 **Protocol:** BDS Documentation Protocol v2.0
 **Documentation structure class:** `service`
 
-> **Generated artifact warning:** `doc/ECNSYSTEM.md` is assembled output. Edit
+> **Generated artifact warning:** `doc/ecnSYSTEM.md` is assembled output. Edit
 > the source modules under `doc/system/` and rebuild. Hand edits to the
 > compiled artifact are overwritten by the next build.
 
@@ -23,7 +23,7 @@ Assembly contract:
 
 - Command: `bash doc/system/BUILD.sh`
 - Validation: `bash doc/system/validate_snapshots.sh` runs during assembly
-- Primary output: `doc/ECNSYSTEM.md`
+- Primary output: `doc/ecnSYSTEM.md`
 
 | Part | File | Contents |
 | --- | --- | --- |

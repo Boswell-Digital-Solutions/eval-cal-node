@@ -1,6 +1,6 @@
 # eval-cal-node — Compiled System Reference
 
-**Designation:** ECN
+**Designation:** ecn
 **Document role:** Canonical compiled technical reference for the eval-cal-node post-implementation calibration subsystem
 **Source:** `doc/system/`
 **Build command:** `bash doc/system/BUILD.sh`
@@ -8,7 +8,7 @@
 **Protocol:** BDS Documentation Protocol v2.0
 **Documentation structure class:** `service`
 
-> **Generated artifact warning:** `doc/ECNSYSTEM.md` is assembled output. Edit
+> **Generated artifact warning:** `doc/ecnSYSTEM.md` is assembled output. Edit
 > the source modules under `doc/system/` and rebuild. Hand edits to the
 > compiled artifact are overwritten by the next build.
 
@@ -23,7 +23,7 @@ Assembly contract:
 
 - Command: `bash doc/system/BUILD.sh`
 - Validation: `bash doc/system/validate_snapshots.sh` runs during assembly
-- Primary output: `doc/ECNSYSTEM.md`
+- Primary output: `doc/ecnSYSTEM.md`
 
 | Part | File | Contents |
 | --- | --- | --- |
@@ -328,7 +328,7 @@ affect Eval math.
 ## Ownership
 
 Owner: Charlie (Forge ecosystem). Registry posture: a governed local-systems
-subsystem (proposed designation `ECN`).
+subsystem (designation `ecn`).
 
 ---
 
@@ -378,7 +378,7 @@ All operational tuning lives in `config/cal_node_config.json`:
 This `doc/system/` tree assembles into the canonical artifact:
 
 ```bash
-bash doc/system/BUILD.sh          # -> doc/ECNSYSTEM.md (validated during assembly)
+bash doc/system/BUILD.sh          # -> doc/ecnSYSTEM.md (validated during assembly)
 bash doc/system/validate_snapshots.sh
 ```
 
@@ -412,7 +412,7 @@ The Documentation CI is `.github/workflows/documentation.yml`.
 It runs on changes to `docs/**`, `doc/**`, `**/*.md` and its own file.
 It runs `bash doc/system/BUILD.sh`.
 It fails if `git diff --exit-code -- doc` shows a difference.
-The assembled `doc/ECNSYSTEM.md` must be built from its parts and committed.
+The assembled `doc/ecnSYSTEM.md` must be built from its parts and committed.
 
 No scheduled run exists.
 No secret scan or other security scan exists in this repository.

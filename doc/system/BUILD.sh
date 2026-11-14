@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Assembles the eval-cal-node compiled system reference (designation ECN).
+# Assembles the eval-cal-node compiled system reference (designation ecn).
 # Fail-closed: missing _index.md, designation/output mismatch, no chapters,
 # or snapshot validation failure aborts the build with BUILD_FAILED on stderr.
 
 PARTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$PARTS_DIR/../.." && pwd)"
-DESIGNATION="ECN"
+DESIGNATION="ecn"
 OUTPUT="${OUTPUT:-doc/${DESIGNATION}SYSTEM.md}"
 VALIDATOR="$PARTS_DIR/validate_snapshots.sh"
 

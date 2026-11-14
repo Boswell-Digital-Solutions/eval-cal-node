@@ -44,7 +44,7 @@ All operational tuning lives in `config/cal_node_config.json`:
 This `doc/system/` tree assembles into the canonical artifact:
 
 ```bash
-bash doc/system/BUILD.sh          # -> doc/ECNSYSTEM.md (validated during assembly)
+bash doc/system/BUILD.sh          # -> doc/ecnSYSTEM.md (validated during assembly)
 bash doc/system/validate_snapshots.sh
 ```
 
@@ -78,7 +78,7 @@ The Documentation CI is `.github/workflows/documentation.yml`.
 It runs on changes to `docs/**`, `doc/**`, `**/*.md` and its own file.
 It runs `bash doc/system/BUILD.sh`.
 It fails if `git diff --exit-code -- doc` shows a difference.
-The assembled `doc/ECNSYSTEM.md` must be built from its parts and committed.
+The assembled `doc/ecnSYSTEM.md` must be built from its parts and committed.
 
 No scheduled run exists.
 No secret scan or other security scan exists in this repository.
